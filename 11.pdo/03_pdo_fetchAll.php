@@ -6,7 +6,7 @@ $password = "";
 $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 $query = "SELECT * FROM mahasiswa";
 $stmt = $pdo->query($query);
-$arr = $stmt->fetch(PDO::FETCH_ASSOC);
+$arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo "<pre>";
 echo print_r($arr);
 echo "</pre>"
